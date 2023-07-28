@@ -17,3 +17,21 @@ Run Project
 ```
 yarn expo start --tunnel
 ```
+
+# Eslint and Prettier
+
+```
+yarn expo install eslint eslint-config-prettier eslint-config-universe eslint-plugin-react-hooks
+```
+
+On .eslintrc.json file
+```
+{
+  "extends": ["universe", "plugin:react-hooks/recommended"]
+}
+```
+
+Install prettier
+```
+expo install prettier
+```
