@@ -7,10 +7,10 @@ yarn create expo-app --template
 
 Add types dependencies
 ```
-yarn add --dev @tsconfig/react-native @types/jest @types/react @types/react-test-renderer typescript @types/react@~18.0.27 typescript@^4.9.4
+yarn add --dev @tsconfig/react-native @types/jest @types/react @types/react-test-renderer typescript
 ```
 ```
-yarn add expo react-native-web@~0.19.6 react-dom@18.2.0 @expo/webpack-config
+yarn add expo react-native-web react-dom @expo/webpack-config
 ```
 
 Run Project
@@ -36,7 +36,9 @@ Install prettier
 expo install prettier
 ```
 
-# Dimensions css (vw, vh, vmin, vmax)
+# CSS Config
+
+## Dimensions css (vw, vh, vmin, vmax)
 ```
 npm install react-native-viewport-units --save
 ```
@@ -45,3 +47,26 @@ Import
 ```
 var {vw, vh, vmin, vmax} = require('react-native-viewport-units');
 ```
+
+# Tailwind
+```
+yarn add nativewind
+yarn add --dev tailwindcss
+```
+
+```
+yarn tailwind init
+```
+
+On tailwind.config.js
+```
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+    content: ["./App.{js,jsx,ts,tsx}", "./src/**/*.{js,jsx,ts,tsx}"],
+    theme: {
+        extend: {},
+    },
+    plugins: [],
+};
+```
+
