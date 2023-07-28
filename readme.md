@@ -35,3 +35,13 @@ Install prettier
 ```
 expo install prettier
 ```
+
+# Dimensions css (vw, vh, vmin, vmax)
+```
+npm install react-native-viewport-units --save
+```
+
+Import
+```
+var {vw, vh, vmin, vmax} = require('react-native-viewport-units');
+```
