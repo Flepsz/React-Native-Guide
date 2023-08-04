@@ -21,7 +21,16 @@ yarn expo start --tunnel
 # Eslint and Prettier
 
 ```
-yarn add expo eslint eslint-config-prettier eslint-config-universe eslint-plugin-react-hooks
+yarn add -D expo eslint eslint-config-prettier eslint-config-universe eslint-plugin-react-hooks @typescript-eslint/eslint-plugin @typescript-eslint/parser
+```
+
+On package.json
+```
+{
+  "eslintConfig": {
+    "extends": "universe/native"
+  }
+}
 ```
 
 On .eslintrc.json file
