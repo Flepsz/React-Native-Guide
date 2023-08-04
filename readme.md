@@ -21,7 +21,7 @@ yarn expo start --tunnel
 # Eslint and Prettier
 
 ```
-yarn expo install eslint eslint-config-prettier eslint-config-universe eslint-plugin-react-hooks
+yarn add expo eslint eslint-config-prettier eslint-config-universe eslint-plugin-react-hooks
 ```
 
 On .eslintrc.json file
@@ -33,14 +33,14 @@ On .eslintrc.json file
 
 Install prettier
 ```
-expo install prettier
+yarn add expo prettier
 ```
 
 # CSS Config
 
 ## Dimensions css (vw, vh, vmin, vmax)
 ```
-npm install react-native-viewport-units --save
+yarn add react-native-viewport-units --save
 ```
 
 Import
