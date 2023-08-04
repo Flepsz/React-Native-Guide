@@ -18,6 +18,14 @@ Run Project
 yarn expo start --tunnel
 ```
 
+# Navigation
+```
+yarn add @react-navigation/native
+```
+```
+npx expo install react-native-screens react-native-safe-area-context @react-navigation/native-stack
+```
+
 # Eslint and Prettier
 
 ```
