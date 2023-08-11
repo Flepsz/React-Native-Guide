@@ -23,7 +23,7 @@ yarn expo start --tunnel
 yarn add @react-navigation/native
 ```
 ```
-npx expo install react-native-screens react-native-safe-area-context @react-navigation/native-stack
+yarn add react-native-screens react-native-safe-area-context @react-navigation/native-stack @react-navigation/stack
 ```
 
 # Eslint and Prettier
