@@ -67,23 +67,15 @@ var {vw, vh, vmin, vmax} = require('react-native-viewport-units');
 
 # Tailwind
 ```
-yarn add nativewind
-yarn add --dev tailwindcss
+yarn add tailwind-rn
+```
+```
+npx setup-tailwind-rn
 ```
 
+## Siga todos os passos de configuração que estão descritos no terminal e logo execute
 ```
-yarn tailwind init
+yarn dev:tailwind
 ```
 
-On tailwind.config.js
-```
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-    content: ["./App.{js,jsx,ts,tsx}", "./src/**/*.{js,jsx,ts,tsx}"],
-    theme: {
-        extend: {},
-    },
-    plugins: [],
-};
-```
 
