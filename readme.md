@@ -73,9 +73,10 @@ yarn add tailwind-rn
 npx setup-tailwind-rn
 ```
 
-## Siga todos os passos de configuração que estão descritos no terminal e logo execute
+Siga todos os passos de configuração que estão descritos no terminal e logo execute
 ```
 yarn dev:tailwind
 ```
+**Obs: Deixe ele sempre executando**
 
 
