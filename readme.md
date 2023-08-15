@@ -79,4 +79,11 @@ yarn dev:tailwind
 ```
 **Obs: Deixe ele sempre executando**
 
+Em `input.css` adicione:
+```
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
 
