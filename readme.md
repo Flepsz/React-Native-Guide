@@ -85,5 +85,12 @@ Em `input.css` adicione:
 @tailwind components;
 @tailwind utilities;
 ```
-
+Em `tailwind.config.js`:
+```
+content: [
+  "./src/**/*.{js,ts,jsx,tsx,mdx}",
+  "./screens/**/*.{js,ts,jsx,tsx,mdx}",
+  "./components/**/*.{js,ts,jsx,tsx,mdx}"
+],
+```
 
