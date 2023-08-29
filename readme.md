@@ -26,6 +26,11 @@ yarn add @react-navigation/native
 yarn add react-native-screens react-native-safe-area-context @react-navigation/native-stack @react-navigation/stack
 ```
 
+## Bottom Tabs
+```
+yarn add @react-navigation/bottom-tabs
+```
+
 # Eslint and Prettier
 
 ```
