@@ -1,44 +1,53 @@
-# Commands To TS
+# Commands To Setup TypeScript in Expo
 
-Create App with template TS 
-```
-yarn create expo-app --template 
+## Create an Expo App with TypeScript Template
+To create a new Expo app using the TypeScript template, run the following command:
+```bash
+yarn create expo-app --template
 ```
 
-Add types dependencies
-```
+## Add TypeScript Dependencies
+Install the necessary TypeScript dependencies:
+```bash
 yarn add --dev @tsconfig/react-native @types/jest @types/react @types/react-test-renderer typescript
-```
-```
 yarn add expo react-native-web react-dom @expo/webpack-config
 ```
 
-Run Project
-```
+## Run the Project
+Start your Expo project using the tunnel option:
+```bash
 yarn expo start --tunnel
 ```
 
-# Navigation
-```
+# Navigation Setup
+To set up navigation in your app, follow these steps:
+
+## Install React Navigation
+```bash
 yarn add @react-navigation/native
 ```
-```
+
+## Add Navigation Stack Dependencies
+```bash
 yarn add react-native-screens react-native-safe-area-context @react-navigation/native-stack @react-navigation/stack
 ```
 
-## Bottom Tabs
-```
+## Add Bottom Tabs Navigation (Optional)
+If you want to use bottom tabs navigation, install the following package:
+```bash
 yarn add @react-navigation/bottom-tabs
 ```
 
-# Eslint and Prettier
+# Eslint and Prettier Configuration
+Set up ESLint and Prettier for your project:
 
-```
+```bash
 yarn add -D expo eslint eslint-config-prettier eslint-config-universe eslint-plugin-react-hooks @typescript-eslint/eslint-plugin @typescript-eslint/parser
 ```
 
-On package.json
-```
+In your `package.json`, update the `eslintConfig` section to extend the desired ESLint configuration:
+
+```json
 {
   "eslintConfig": {
     "extends": "universe/native"
@@ -46,53 +55,58 @@ On package.json
 }
 ```
 
-On .eslintrc.json file
-```
+Create an `.eslintrc.json` file and extend the ESLint configurations:
+
+```json
 {
   "extends": ["universe", "plugin:react-hooks/recommended"]
 }
 ```
 
-Install prettier
-```
+Install Prettier:
+
+```bash
 yarn add expo prettier
 ```
 
-# CSS Config
+# CSS Configuration
 
-## Dimensions css (vw, vh, vmin, vmax)
-```
+## Use Viewport Units (vw, vh, vmin, vmax)
+To enable viewport units in your styles, install the `react-native-viewport-units` package:
+
+```bash
 yarn add react-native-viewport-units --save
 ```
 
-Import
-```
-var {vw, vh, vmin, vmax} = require('react-native-viewport-units');
+Import the units in your code:
+
+```javascript
+var { vw, vh, vmin, vmax } = require('react-native-viewport-units');
 ```
 
-# Tailwind
-**Choose which Tailwind to use: Nativewind or Tailwind-RN**<br>
-Nativewind is better, but sometimes it may not work, so there is an alternative.
+# Tailwind CSS Setup
+
+**Choose between Nativewind or Tailwind-RN based on your preference and project requirements.**
 
 ## Nativewind
-Install the dependencies:
-```
+
+### Install Dependencies
+```bash
 yarn add nativewind postcss autoprefixer
 yarn add --dev tailwindcss@3.3.2
 ```
 
-Run this command to initialize Tailwind and create the `tailwind.config.js` file:
-```
+### Initialize Tailwind CSS
+Run the following command to initialize Tailwind CSS and create the `tailwind.config.js` file:
+```bash
 npx tailwindcss init
 ```
 
-Add the paths to all your component files in the `tailwind.config.js`:
-```diff
-// tailwind.config.js
-
+### Configure `tailwind.config.js`
+Edit your `tailwind.config.js` file to include paths to your component files:
+```javascript
 module.exports = {
-- content: [],
-+ content: ["./App.{js,jsx,ts,tsx}", "./src/**/*.{js,jsx,ts,tsx}" "./<custom directory>/**/*.{js,jsx,ts,tsx}", ],
+  content: ["./App.{js,jsx,ts,tsx}", "./src/**/*.{js,jsx,ts,tsx}", "./<custom directory>/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {},
   },
@@ -100,21 +114,21 @@ module.exports = {
 }
 ```
 
-Modify your `babel.config.js`:
-```diff
-// babel.config.js
+### Update `babel.config.js`
+Modify your `babel.config.js` to include the Nativewind Babel plugin:
+```javascript
 module.exports = function (api) {
   api.cache(true);
   return {
     presets: ["babel-preset-expo"],
-+   plugins: ["nativewind/babel"],
+    plugins: ["nativewind/babel"],
   };
 };
 ```
 
-Create `postcss.config.js` and add
-```
-// postcss.config.js
+### Create `postcss.config.js`
+Create a `postcss.config.js` file and add the following configuration:
+```javascript
 module.exports = {
   plugins: {
     tailwindcss: {},
@@ -123,70 +137,57 @@ module.exports = {
 }
 ```
 
-Create `metro.config.js` and add
-```
+### Configure `metro.config.js`
+Create a `metro.config.js` file and add the following code to enable CSS support in Metro:
+```javascript
 const { getDefaultConfig } = require('expo/metro-config');
 
-/** @type {import('expo/metro-config').MetroConfig} */
 const config = getDefaultConfig(__dirname, {
-  // [Web-only]: Enables CSS support in Metro.
   isCSSEnabled: true,
 });
 
 module.exports = config;
 ```
 
-Finally, create `globals.css` and import in `StackNavigator`
-```
-// globals.css
+### Use Tailwind CSS in Your Project
+Create a `globals.css` file and add the following Tailwind CSS imports:
+```css
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 ```
-**Recommended to put in the root of your project**
 
-Example of import
-```
-// RootNavigator.tsx
-import "./globals.css"
-```
-If you are using typescript, create `globals.d.ts` and add
-```
+Import the `globals.css` file in your project where needed.
+
+### TypeScript Support
+If you are using TypeScript, create a `globals.d.ts` file and add the following reference:
+```typescript
 /// <reference types="nativewind/types" />
 ```
 
-
 ## Tailwind-RN
-```
+```bash
 yarn add tailwind-rn
 ```
 
-```
+```bash
 npx setup-tailwind-rn
 ```
 
-Follow all the configuration steps as described in the terminal, and then execute:
-```
+Follow the configuration steps as described in the terminal, and run:
+```bash
 yarn dev:tailwind
 ```
 
-**Note: Keep it running at all times.**
+**Note: Keep the dev server running at all times.**
 
-In `input.css`, add:
-```
+In your `input.css` file, include the following Tailwind CSS imports:
+```css
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 ```
 
-In `tailwind.config.js`:
-```
-content: [
-  "./src/**/*.{js,ts,jsx,tsx,mdx}",
-  "./screens/**/*.{js,ts,jsx,tsx,mdx}",
-  "./components/**/*.{js,ts,jsx,tsx,mdx}"
-],
-```
+In your `tailwind.config.js` file, specify the content paths for your project.
 
-
-
+This completes the setup for Tailwind CSS in your React Native project.
