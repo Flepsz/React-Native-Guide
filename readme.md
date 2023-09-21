@@ -106,9 +106,10 @@ npx tailwindcss init
 
 ### Configure `tailwind.config.js` :gear:
 Edit your `tailwind.config.js` file to include paths to your component files:
-```javascript
+```diff
 module.exports = {
-  content: ["./App.{js,jsx,ts,tsx}", "./src/**/*.{js,jsx,ts,tsx}", "./<custom directory>/**/*.{js,jsx,ts,tsx}"],
+- content: [],
++ content: ["./App.{js,jsx,ts,tsx}", "./src/**/*.{js,jsx,ts,tsx}" "./<custom directory>/**/*.{js,jsx,ts,tsx}", ],
   theme: {
     extend: {},
   },
@@ -118,12 +119,12 @@ module.exports = {
 
 ### Update `babel.config.js` :wrench:
 Modify your `babel.config.js` to include the Nativewind Babel plugin:
-```javascript
+```diff
 module.exports = function (api) {
   api.cache(true);
   return {
     presets: ["babel-preset-expo"],
-    plugins: ["nativewind/babel"],
++   plugins: ["nativewind/babel"],
   };
 };
 ```
