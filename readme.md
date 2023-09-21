@@ -1,19 +1,19 @@
-# Commands To Setup TypeScript in Expo
+# Commands To Set Up TypeScript in Expo
 
-## Create an Expo App with TypeScript Template
+## 🚀 Create an Expo App with TypeScript Template
 To create a new Expo app using the TypeScript template, run the following command:
 ```bash
 yarn create expo-app --template
 ```
 
-## Add TypeScript Dependencies
+## 📦 Add TypeScript Dependencies
 Install the necessary TypeScript dependencies:
 ```bash
 yarn add --dev @tsconfig/react-native @types/jest @types/react @types/react-test-renderer typescript
 yarn add expo react-native-web react-dom @expo/webpack-config
 ```
 
-## Run the Project
+## 🏃‍♂️ Run the Project
 Start your Expo project using the tunnel option:
 ```bash
 yarn expo start --tunnel
@@ -22,17 +22,17 @@ yarn expo start --tunnel
 # Navigation Setup
 To set up navigation in your app, follow these steps:
 
-## Install React Navigation
+## 🧭 Install React Navigation
 ```bash
 yarn add @react-navigation/native
 ```
 
-## Add Navigation Stack Dependencies
+## 📚 Add Navigation Stack Dependencies
 ```bash
 yarn add react-native-screens react-native-safe-area-context @react-navigation/native-stack @react-navigation/stack
 ```
 
-## Add Bottom Tabs Navigation (Optional)
+## ➕ Add Bottom Tabs Navigation (Optional)
 If you want to use bottom tabs navigation, install the following package:
 ```bash
 yarn add @react-navigation/bottom-tabs
@@ -71,7 +71,7 @@ yarn add expo prettier
 
 # CSS Configuration
 
-## Use Viewport Units (vw, vh, vmin, vmax)
+## 📐 Use Viewport Units (vw, vh, vmin, vmax)
 To enable viewport units in your styles, install the `react-native-viewport-units` package:
 
 ```bash
@@ -190,4 +190,4 @@ In your `input.css` file, include the following Tailwind CSS imports:
 
 In your `tailwind.config.js` file, specify the content paths for your project.
 
-This completes the setup for Tailwind CSS in your React Native project.
+This completes the setup for Tailwind CSS in your React Native project. 🎉
