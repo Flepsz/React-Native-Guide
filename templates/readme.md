@@ -27,7 +27,8 @@ To use one of these templates for your project, follow these steps:
 1. Clone this repository or download the template you need.
 2. Navigate to the template's directory.
 3. Install the project dependencies using `npm install` or `yarn install`.
-4. Start building your app by adding components, screens, and logic based on the chosen template.
+4. Rename the "name" in the `package.json` to your project's name
+5. Start building your app by adding components, screens, and logic based on the chosen template.
 
 ## Contributing
 
