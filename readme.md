@@ -6,14 +6,14 @@ To create a new Expo app using the TypeScript template, run the following comman
 yarn create expo-app --template
 ```
 
-## Add TypeScript Dependencies :hammer_and_wrench:
+## Add TypeScript Dependencies 
 Install the necessary TypeScript dependencies:
 ```bash
 yarn add --dev @tsconfig/react-native @types/jest @types/react @types/react-test-renderer typescript
 yarn add expo react-native-web react-dom @expo/webpack-config
 ```
 
-## Run the Project :running:
+## Run the Project 
 Start your Expo project using the tunnel option:
 ```bash
 yarn expo start --tunnel
@@ -23,17 +23,17 @@ yarn expo start --tunnel
 
 To set up navigation in your app, follow these steps:
 
-## Install React Navigation :world_map:
+## Install React Navigation
 ```bash
 yarn add @react-navigation/native
 ```
 
-## Add Navigation Stack Dependencies :card_file_box:
+## Add Navigation Stack Dependencies
 ```bash
 yarn add react-native-screens react-native-safe-area-context @react-navigation/native-stack @react-navigation/stack
 ```
 
-## Add Bottom Tabs Navigation (Optional) :arrow_down:
+## Add Bottom Tabs Navigation (Optional) 
 If you want to use bottom tabs navigation, install the following package:
 ```bash
 yarn add @react-navigation/bottom-tabs
@@ -65,7 +65,7 @@ Create an `.eslintrc.json` file and extend the ESLint configurations:
 }
 ```
 
-Install Prettier :art::
+Install Prettier 
 
 ```bash
 yarn add expo prettier
@@ -73,7 +73,7 @@ yarn add expo prettier
 
 # :art: CSS Configuration 
 
-## Use Viewport Units (vw, vh, vmin, vmax) :triangular_ruler:
+## Use Viewport Units (vw, vh, vmin, vmax)
 To enable viewport units in your styles, install the `react-native-viewport-units` package:
 
 ```bash
@@ -90,21 +90,21 @@ var { vw, vh, vmin, vmax } = require('react-native-viewport-units');
 
 **Choose between Nativewind or Tailwind-RN based on your preference and project requirements.**
 
-## :zap: Nativewind 
+## Nativewind 
 
-### Install Dependencies :package:
+### Install Dependencies
 ```bash
 yarn add nativewind postcss autoprefixer
 yarn add --dev tailwindcss@3.3.2
 ```
 
-### Initialize Tailwind CSS :wrench:
+### Initialize Tailwind CSS
 Run the following command to initialize Tailwind CSS and create the `tailwind.config.js` file:
 ```bash
 npx tailwindcss init
 ```
 
-### Configure `tailwind.config.js` :gear:
+### Configure `tailwind.config.js` 
 Edit your `tailwind.config.js` file to include paths to your component files:
 ```diff
 module.exports = {
@@ -117,7 +117,7 @@ module.exports = {
 }
 ```
 
-### Update `babel.config.js` :wrench:
+### Update `babel.config.js`
 Modify your `babel.config.js` to include the Nativewind Babel plugin:
 ```diff
 module.exports = function (api) {
@@ -129,7 +129,7 @@ module.exports = function (api) {
 };
 ```
 
-### Create `postcss.config.js` :art:
+### Create `postcss.config.js`
 Create a `postcss.config.js` file and add the following configuration:
 ```javascript
 module.exports = {
@@ -140,7 +140,7 @@ module.exports = {
 }
 ```
 
-### Configure `metro.config.js` :electric_plug:
+### Configure `metro.config.js`
 Create a `metro.config.js` file and add the following code to enable CSS support in Metro:
 ```javascript
 const { getDefaultConfig } = require('expo/metro-config');
@@ -152,7 +152,7 @@ const config = getDefaultConfig(__dirname, {
 module.exports = config;
 ```
 
-### Use Tailwind CSS in Your Project :art:
+### Use Tailwind CSS in Your Project
 Create a `globals.css` file and add the following Tailwind CSS imports:
 ```css
 @tailwind base;
@@ -162,13 +162,13 @@ Create a `globals.css` file and add the following Tailwind CSS imports:
 
 Import the `globals.css` file in your project where needed.
 
-### TypeScript Support :label:
+### TypeScript Support
 If you are using TypeScript, create a `globals.d.ts` file and add the following reference:
 ```typescript
 /// <reference types="nativewind/types" />
 ```
 
-## :nail_care: Tailwind-RN 
+## Tailwind-RN 
 ```bash
 yarn add tailwind-rn
 ```
